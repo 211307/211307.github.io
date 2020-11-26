@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="VarKai" />
+	
+	
+	
+	<title>二、Java-面向对象 ｜ ZOZO</title>
+	
+    
+    
+    <meta name="description" content="封装 继承 包管理 多态 接口 内部类 面向过程：就是实现步骤的过程。 面向对象：从宏观的角度思考解决的过程。 对象的属性：每个对象的每个 属性 都拥有特定的 值。 对象的行为：对象能够 执行 的操作。 面向对象的三大特征：封装、" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, theme, zozo" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://211307.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://211307.github.io/">
+                    <span>ZOZO</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">中二少年</p>
+            <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://211307.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/java/2.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/'>二、Java-面向对象</a></h2>
+                        <span class="date">2020.02.24</span>
+                    </div>
+                    <div class="post_content markdown"><!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#%E5%B0%81%E8%A3%85">封装</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a></li>
+<li><a href="#%E5%8C%85%E7%AE%A1%E7%90%86">包管理</a></li>
+<li><a href="#%E5%A4%9A%E6%80%81">多态</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3">接口</a></li>
+<li><a href="#%E5%86%85%E9%83%A8%E7%B1%BB">内部类</a></li>
+</ul>
+<!-- /code_chunk_output -->
+<ul>
+<li>
+<p>面向过程：就是实现步骤的过程。</p>
+</li>
+<li>
+<p>面向对象：从宏观的角度思考解决的过程。</p>
+<ul>
+<li>对象的属性：每个对象的每个 <strong>属性</strong> 都拥有特定的 <strong>值</strong>。</li>
+<li>对象的行为：对象能够 <strong>执行</strong> 的操作。</li>
+<li>面向对象的<strong>三大特征</strong>：封装、继承、多态。</li>
+</ul>
+</li>
+<li>
+<p>类：是对现实生活中一类具有 <strong>共同属性</strong> 和 <strong>行为</strong> 的事务的抽象。</p>
+<ul>
+<li>
+<p>特点：</p>
+<ul>
+<li>类是对象的 <strong>数据类型</strong>。</li>
+<li>一个类里边只能有一个用 <strong>public</strong> 修饰的 <strong>class</strong>。</li>
+<li>创建成员方法。</li>
+</ul>
+</li>
+<li>
+<p>定义类：</p>
+<ul>
+<li>
+<p>标准类制作：</p>
+<ol>
+<li>成员变量
+<ul>
+<li>使用 <strong>private</strong> 修饰。</li>
+</ul>
+</li>
+<li>构造方法
+<ul>
+<li>提供一个 <strong>无参</strong> 构造方法。</li>
+<li>提供一个带 <strong>多个参数</strong> 的构造方法。</li>
+</ul>
+</li>
+<li>成员方法
+<ul>
+<li>提供每一个 <strong>成员变量</strong> 对应的 set变量名() / get变量名()。</li>
+<li>提供一个 <strong>显示</strong> 对象信息的 show()。</li>
+</ul>
+</li>
+<li>创建对象并为其成员变量赋值的两种方式
+<ul>
+<li><strong>无参</strong> 构造方法创建对象后使用 set变量名() 赋值。</li>
+<li>使用 <strong>带有属性</strong> 的构造方法直接创建带有属性值的对象。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>类的创建</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">  <span class="kd">class</span> <span class="nc">类名</span><span class="o">{</span>  
+      <span class="n">数据类型</span> <span class="n">元素</span><span class="o">;</span> <span class="c1">// 成员变量
+</span><span class="c1"></span>      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名</span><span class="o">(</span><span class="n">形参</span><span class="o">){</span>
+           <span class="n">方法体</span><span class="o">;</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+</code></pre></div></li>
+<li>
+<p>类的调用</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">aaa</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">类名</span> <span class="n">对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">类名</span><span class="o">();</span>
+      <span class="n">对象名</span><span class="o">.</span><span class="na">方法名</span><span class="o">(</span><span class="n">或变量</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>创建对象</p>
+<ul>
+<li>格式：<code>类名 对象名 = new 类名();</code></li>
+</ul>
+</li>
+<li>
+<p>调用对象</p>
+<ul>
+<li>成员变量格式：<code>对象名.变量名</code></li>
+<li>成员方法格式：<code>对象名.方法名();</code></li>
+</ul>
+</li>
+<li>
+<p>注意：</p>
+<ul>
+<li>如果两个对象的地址一样，那么修改一个另一个跟着改变。</li>
+<li>对象之前被 new ，那么再 new 一次的时候会创建一个新的对象堆内存。</li>
+</ul>
+</li>
+<li>
+<p>构造方法</p>
+<ul>
+<li>
+<p>构造方法的四个要点：</p>
+<ul>
+<li>创建了构造方法，系统将不再提供默认的无参构造方法。</li>
+<li>构造方法名称必须和 <strong>类名</strong> 一致。</li>
+<li>要通过 new 关键字调用</li>
+<li>构造器虽然有返回值，但是不能使用 return 返回某个值。</li>
+<li>构造方法不需要数据类型。</li>
+</ul>
+</li>
+<li>
+<p>格式</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">类名</span><span class="o">{</span>
+   <span class="n">修饰符</span> <span class="nf">类名</span><span class="o">(</span><span class="n">参数</span><span class="o">){</span>
+       <span class="n">方法体</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+<li>
+<p>构造方法的重载</p>
+<ul>
+<li>方法名称相同，形参列表不同</li>
+</ul>
+</li>
+<li>
+<p>注意：</p>
+<ul>
+<li>无论是否使用，都手工书写无参构造方法。</li>
+<li>垃圾回收机</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="封装">封装</h2>
+<hr>
+<ul>
+<li>
+<p>封装的优点：</p>
+<ol>
+<li>提高代码的安全性。</li>
+<li>提高代码的复用性。</li>
+<li>“高内聚” ：封装细节，便于修改内部代码，提高可维护性。</li>
+<li>“低耦合” ：简化外部调用，便于调用者使用，便于扩展和协作。</li>
+</ol>
+</li>
+<li>
+<p>访问权限修饰符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">修饰符</th>
+<th style="text-align:center">同一个类</th>
+<th style="text-align:center">同一个包中</th>
+<th style="text-align:center">子类</th>
+<th style="text-align:center">所有类(不同包下的类)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">private</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">default（默认）</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">protected</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">public</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>关键字</p>
+<ul>
+<li>
+<p><strong>private</strong>：</p>
+<ul>
+<li>被 <strong>private</strong> 修饰的变量（或 方法）只能在 <strong>本类</strong> 当中使用。</li>
+<li>如果想被其它类使用需要使用方法：
+<ul>
+<li>
+<p>get方法：</p>
+<ul>
+<li>格式：<code>public 数据类型 get变量名() { return 变量名; }</code>。</li>
+<li>作用：用于获取值。</li>
+</ul>
+</li>
+<li>
+<p>set 方法：</p>
+<ul>
+<li>格式：<code>public void set变量名(参数) { 变量名 = 参数; }</code>。</li>
+<li>作用：用于设置值。</li>
+</ul>
+</li>
+<li>
+<p>注意 ：</p>
+<ul>
+<li>子类 <strong>无法</strong> 使用父类的 <strong>私有</strong> 属性和方法。</li>
+<li>被 <strong>private</strong> 修饰的方法可以使用 **<code>get变量名()</code>**来调用。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>this</strong>：</p>
+<ul>
+<li>this 修饰的变量表示 <strong>成员变量</strong>。
+<ul>
+<li>方法的形参和成员变量名称 <strong>相同</strong>，带 this 的是 <strong>成员变量</strong>。</li>
+</ul>
+</li>
+<li>局部变量和成员<strong>变量名称相同</strong> 时，this 能解决局部变量隐藏成员变量。</li>
+<li>this 被那个对象引用那么它就代表那个对象。</li>
+<li>格式：</li>
+<li>成员变量：<code>this.成员变量</code>
+<ul>
+<li>构造方法：<code>this([实参])</code></li>
+<li>成员变量：<code>this.成员方法([实参])</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="继承">继承</h2>
+<hr>
+<ol>
+<li>
+<p>继承概述</p>
+<ul>
+<li>可以使子类具有父类的 <strong>属性</strong> 和 <strong>方法</strong>，还可以在子类中 <strong>重新定义</strong>，追加属性和方法。</li>
+<li>继承的好处：
+<ul>
+<li>提高了代码的 <strong>复用性</strong>。</li>
+<li>提高了代码的 <strong>维护性</strong>。</li>
+</ul>
+</li>
+<li>继承的弊端：
+<ul>
+<li>削弱了子类的 <strong>独立性</strong>。</li>
+</ul>
+</li>
+<li>Fu：父类也被成为基类、超类。</li>
+<li>Zi：子类也被成为派生类。</li>
+<li>特点：
+<ul>
+<li>子类可以有 <strong>父类</strong> 的特点。</li>
+<li>子类还可以有自己 <strong>特有</strong> 的内容。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>什么时候使用继承？</p>
+<ul>
+<li>假设法：我有两个类 A 和 B，如果他们满足 A 是 B 的一种或 B 是 A 的一种，就说明他们存在继承关系，这个时候可以考虑使用继承，否则就不考虑使用继承。</li>
+</ul>
+</li>
+<li>
+<p>继承格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">子类名</span> <span class="kd">extends</span> <span class="n">父类名</span><span class="o">{</span> <span class="n">类语句体</span><span class="o">;</span> <span class="o">}</span>
+</code></pre></div></li>
+<li>
+<p>继承的变量访问范围：</p>
+<ol>
+<li>子类 <strong>局部</strong> 范围找</li>
+<li>子类 <strong>成员</strong>范围找</li>
+<li>父类 <strong>成员</strong>范围找</li>
+<li>如果都没有，则 <strong>报错</strong>。</li>
+</ol>
+</li>
+<li>
+<p>关键字：</p>
+<ol>
+<li><strong>super</strong>：
+<ul>
+<li>用来访问 <strong>父类</strong> 的成员变量和方法（创建父类成员变量或方法的存储空间）。</li>
+<li>格式：
+<ol>
+<li>成员变量：<code>super.成员变量</code></li>
+<li>构造方法：<code>super([实参])</code></li>
+<li>成员方法：<code>super.成员方法([实参])</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>继承中构造方法的特点：</p>
+<ol>
+<li>子类中所有的构造方法 <strong>默认访问</strong> 父类中的 <strong>无参</strong> 的构造方法。</li>
+<li>如果访问父类的 <strong>有参</strong> 构造方法，则需要在子类中添加  <strong><code>super(参数)</code></strong>。</li>
+</ol>
+</li>
+<li>
+<p>继承中的成员方法</p>
+<ol>
+<li>寻找范围：
+<ul>
+<li>子类成员范围找</li>
+<li>父类成员范围找</li>
+<li>如果都没有，则报错。</li>
+</ul>
+</li>
+<li>如果在子类中添加 <strong>super();</strong>，则会先运行父类再运行子类。( super(); 一般在子类的第一行)</li>
+</ol>
+</li>
+<li>
+<p>方法的重写</p>
+<ol>
+<li>概述：
+<ul>
+<li>子类中出现了和父类 <strong>一样</strong> 的方法。</li>
+<li>使子类沿袭父类的功能，<strong>又定义</strong> 了新的内容。</li>
+</ul>
+</li>
+<li>使用：
+<ul>
+<li>在方法重写的时候应在方法的上面使用 <strong><code>@Override</code></strong> 进行注解，<strong>防止</strong> 方法重写错误。</li>
+</ul>
+</li>
+<li>注意事项：
+<ol>
+<li>父类的私有属性子类不可以重写。</li>
+<li>子类的访问权限不能低于父类的访问权限。（public &gt; 默认的 &gt; 私有的）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>继承的注意事项：</p>
+<ol>
+<li>继承只支持单继承，不支持多继承。
+<ol>
+<li>继承支持多层继承类。</li>
+<li>可以 new 子类，因为子类方法最多。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="包管理">包管理</h2>
+<hr>
+<ol>
+<li>
+<p>包</p>
+<ol>
+<li>
+<p>包的概述和使用：</p>
+<ol>
+<li>作用：对类进行分类管理。</li>
+</ol>
+</li>
+<li>
+<p>创建包管理格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">包名</span><span class="o">;</span>  <span class="c1">// 多级包用 . 分隔
+</span></code></pre></div></li>
+<li>
+<p>new 不同包的类：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 包名就是包的相对路径，文件之间使用 . 分隔
+</span><span class="c1"></span><span class="n">包名</span><span class="o">.</span><span class="na">类名</span> <span class="n">对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">包名</span><span class="o">.</span><span class="na">类名</span><span class="o">();</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>导包</p>
+<ol>
+<li>
+<p>概述：</p>
+<ul>
+<li>使用包下类时，要写下类的路径，为了简化此操作，java提供了导包功能。</li>
+</ul>
+</li>
+<li>
+<p>导包格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">包的相对路径</span><span class="o">;</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>修饰符</p>
+<ol>
+<li>权限修饰符
+<ul>
+<li>权限修饰符图在此 <strong><a href="#%E5%B0%81%E8%A3%85">封装</a></strong> 链接中</li>
+</ul>
+</li>
+<li>final 修饰符
+<ol>
+<li>final 修饰基本类型，基本类型 <strong>重新赋值</strong> 报错。</li>
+<li>final 修饰引用类型，引用类型 <strong>改变地址值</strong> 则报错。</li>
+</ol>
+</li>
+<li>static 修饰符
+<ol>
+<li>特点：
+<ol>
+<li>static 关键字是静态的意思，可以 <strong>修饰</strong> 成员变量和成员方法。</li>
+<li>被 static 修饰的可以被类的所有对象 <strong>共享</strong>。</li>
+<li>可以通过类名或对象名 <strong>调用</strong>。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>调用 static 修饰的成员变量（成员方法）格式：
+<ul>
+<li>成员变量：<code>类名.成员变量 = 元素;</code></li>
+<li>成员方法：<code>类名.成员方法([参数]);</code></li>
+</ul>
+</li>
+<li>注意事项：
+<ul>
+<li>静态的成员方法只能访问 静态的成员方法和成员变量。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="多态">多态</h2>
+<hr>
+<ol>
+<li>
+<p>多态概述</p>
+<ul>
+<li>同一个对象，在不同时刻表现出来的不同形态。</li>
+</ul>
+</li>
+<li>
+<p>多态的前提和体现</p>
+<ul>
+<li>有继承/实现关系。</li>
+<li>有方法重写。</li>
+<li>用父类引用指向（new）子类对象。</li>
+</ul>
+</li>
+<li>
+<p>多态的成员访问特点</p>
+<ol>
+<li>成员变量：编译看左边，执行看左边。</li>
+<li>成员方法：编译看左边，执行看右边（ 这里的 <strong>执行看右边</strong> 指的是继承中的方法的重写）</li>
+</ol>
+</li>
+<li>
+<p>多态的好处和弊端：</p>
+<ol>
+<li>
+<p>创建一个类（第三类），在类里面定义一个方法，使用父类作为参数，将来使用的时候直接 new 第三类，再 new 子类，然后使用方法调用实参是子类。</p>
+<ol>
+<li>
+<p>创建多态：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 父类中的方法
+</span><span class="c1"></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名1</span><span class="o">(){</span>
+   <span class="n">方法体</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// 第三类中的方法
+</span><span class="c1"></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名</span><span class="o">(</span><span class="n">父类</span> <span class="n">参数</span><span class="o">){</span>
+  <span class="n">参数</span><span class="o">.</span><span class="na">父类中的方法名</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="c1">// 子类中的方法
+</span><span class="c1"></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名1</span><span class="o">(){</span>
+   <span class="n">方法体</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></li>
+<li>
+<p>调用多态：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">第三类</span> <span class="n">对象名1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">第三类</span><span class="o">();</span>
+<span class="n">子类</span> <span class="n">对象名2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">子类</span><span class="o">();</span>
+<span class="n">对象名1</span><span class="o">.</span><span class="na">第三类中的方法</span><span class="o">(</span><span class="n">对象名2</span><span class="o">);</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>多态 <strong>提高</strong> 了代码的扩展性。</p>
+</li>
+<li>
+<p>多态 <strong>不能</strong> 直接访问子类特有的功能。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>多态的转型</p>
+<ol>
+<li>
+<p>概述</p>
+<ul>
+<li>帮助我们使用子类的特有功能。</li>
+</ul>
+</li>
+<li>
+<p>类型：</p>
+<ul>
+<li>
+<p>向上转型</p>
+<ul>
+<li>从子到父</li>
+<li>父类引用指向子类对象</li>
+</ul>
+</li>
+<li>
+<p>向下转型</p>
+<ul>
+<li>从父到子</li>
+<li>父类引用转为子类对象</li>
+</ul>
+</li>
+<li>
+<p>格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//向上转型
+</span><span class="c1"></span><span class="n">父类</span> <span class="n">对象名1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">子类</span><span class="o">();</span>
+
+<span class="c1">//向下转型
+</span><span class="c1"></span><span class="n">子类</span> <span class="n">对象名2</span> <span class="o">=(</span><span class="n">子类</span><span class="o">)</span><span class="n">对象名1</span><span class="o">;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>注意：
+<ul>
+<li>向下转型的时候注意 <strong>对象名</strong> 的地址。</li>
+<li>子类不能转换成子类。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>抽象类</p>
+<ol>
+<li>
+<p>特定</p>
+<ol>
+<li>要使用抽象方法，类 <strong>必须</strong>是抽象类。</li>
+<li>抽象方法不能直接 new ，可以通过多态来实例化。</li>
+<li>抽象类的子类要么 <strong>重写</strong> 抽象类的 <strong>所有</strong> 抽象方法，要么 <strong>设置</strong> 为抽象类。</li>
+</ol>
+</li>
+<li>
+<p>定义格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 创建抽象类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">抽象类名</span><span class="o">{</span>    <span class="c1">// abstract 设置抽象类
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">方法名</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="c1">//创建多态
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">子类</span> <span class="kd">extends</span> <span class="n">抽象类名</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名</span><span class="o">(){</span>        <span class="c1">// 抽象方法的重写
+</span><span class="c1"></span>        <span class="n">方法体</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//  调用
+</span><span class="c1"></span><span class="n">抽象类名</span> <span class="n">对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">子类</span><span class="o">();</span>        <span class="c1">// 通过多态调用
+</span></code></pre></div></li>
+<li>
+<p>抽象类的成员特点</p>
+<ol>
+<li>可以使用成员变量。</li>
+<li>可以使用构造方法
+<ol>
+<li>有构造方法，但是不能调用。（就是不能被 new）</li>
+<li>构造方法作用是：用于子类访问父类的数据的初始化，如：成员变量。</li>
+</ol>
+</li>
+<li>成员方法
+<ol>
+<li>可以有抽象方法，也可以没有。</li>
+<li>限定子类必须完成某些动作。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="接口">接口</h2>
+<hr>
+<ol>
+<li>
+<p>接口概述</p>
+<ol>
+<li>接口就是一种 <strong>公共的规范标准</strong></li>
+<li>java 中的接口更多的体现在 <strong>对行为的抽象</strong></li>
+</ol>
+</li>
+<li>
+<p>接口的特点</p>
+<ol>
+<li>
+<p>使用 <code>interface</code> 修饰。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">接口名</span><span class="o">{}</span>
+</code></pre></div></li>
+<li>
+<p>子类使用 <code>implements</code> 继承接口。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">类名</span> <span class="kd">implements</span> <span class="n">接口名</span><span class="o">{}</span>
+</code></pre></div></li>
+<li>
+<p>接口不能被实例化，可以通过多态实例化。</p>
+</li>
+<li>
+<p>接口中的 <strong>成员变量</strong> 默认被 final 修饰。</p>
+</li>
+<li>
+<p>通过接口名可以访问 <strong>成员变量</strong>。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>接口的 <strong>默认</strong> 修饰符：</p>
+<ol>
+<li>成员变量：<code>public static final</code></li>
+<li>抽象方法：<code>public abstract</code></li>
+</ol>
+</li>
+<li>
+<p>接口的实现类</p>
+<ol>
+<li>要么重写接口中的 <strong>所有</strong> 抽象方法。</li>
+<li>要么直接 <strong>设置</strong> 为抽象类。</li>
+</ol>
+</li>
+<li>
+<p>接口的成员特点</p>
+<ol>
+<li>接口没有构造方法和成员方法，<strong>只能</strong> 使用抽象方法。</li>
+<li>通过重写接口里的抽象方法，来调用。</li>
+<li>一个类如果没有父类，默认 <strong>继承</strong> 自 Object 类。</li>
+</ol>
+</li>
+<li>
+<p>类和接口的关系</p>
+<ol>
+<li>类和接口的关系：
+<ol>
+<li>实现关系，可以单实现，也可以多实现，还可以在继承一个类的同时实现多个接口。</li>
+</ol>
+</li>
+<li>接口和接口的关系：
+<ol>
+<li>继承关系，可以单继承，也可以多继承。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>抽象类和接口的区别</p>
+<ul>
+<li>成员区别：
+<ul>
+<li>抽象类：变量、常量、构造方法、抽象方法和非抽象方法。</li>
+<li>接口：常量、抽象方法。</li>
+</ul>
+</li>
+<li>关系区别：
+<ul>
+<li>类与类：继承、单继承。</li>
+<li>类与接口：实现、可以单实现、也可以多实现。</li>
+<li>接口与接口：继承、单继承、多继承。</li>
+</ul>
+</li>
+<li>设计理念区别：
+<ul>
+<li>抽象类：对类抽象，包括属性、行为。</li>
+<li>接口：对行为抽象，只要是行为。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>注意事项：</p>
+<ol>
+<li>使用接口的时候直接 new 子类，因为子类方法最多。</li>
+</ol>
+</li>
+</ol>
+<h2 id="内部类">内部类</h2>
+<hr>
+<ol>
+<li>
+<p>类名作为形参和返回值：</p>
+<ol>
+<li>
+<p>方法的形参是类名，需要的是该类的对象。（就是 new 该类的类名）。</p>
+</li>
+<li>
+<p>方法的返回值是类名，返回的值该类的对象。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 返回值类名
+</span><span class="c1"></span><span class="kd">public</span> <span class="n">类名1</span> <span class="nf">get</span><span class="o">(){</span>
+    <span class="n">类名1</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">类名1</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">对象名</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// 调用
+</span><span class="c1"></span><span class="n">类名2</span> <span class="n">对象名1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">类名2</span><span class="o">();</span>
+<span class="n">类1</span> <span class="n">对象名2</span><span class="o">=</span><span class="n">对象名1</span><span class="o">.</span><span class="na">类名2里的方法名</span><span class="o">();</span>
+<span class="n">对象名1</span><span class="o">.</span><span class="na">类1里的方法名</span><span class="o">();</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>抽象类名作为形参和返回值：</p>
+<ol>
+<li>
+<p>抽象类名作为形参，需要的是子类的对象。（就是 new 该子类的类名）。</p>
+</li>
+<li>
+<p>抽象类名作为返回值，返回值是子类的对象。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">抽象类名</span> <span class="nf">方法名</span><span class="o">(){</span>
+    <span class="n">抽象类名</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">子类名</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">对象名</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>接口名作为形参和返回值：</p>
+<ol>
+<li>
+<p>接口名作为形参，需要的是实现类（就是子类）的对象。</p>
+</li>
+<li>
+<p>接口名作为返回值，返回值是实现类的对象。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">接口名</span> <span class="nf">方法名</span><span class="o">(){</span>
+    <span class="n">接口名</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">子类</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">对象名</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>内部类</p>
+<ol>
+<li>
+<p>内部类概述：</p>
+<ol>
+<li>
+<p>在一个类中再定义一个类。</p>
+</li>
+<li>
+<p>格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">类名</span><span class="o">{</span>
+      <span class="n">修饰符</span> <span class="kd">class</span> <span class="nc">类名</span><span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>内部类的特点：</p>
+<ol>
+<li>内部类可以直接访问外部类的成员，包括私有。</li>
+<li>外部类要访问内部类的成员，必须创建对象。</li>
+<li>内部类的定义：
+<ol>
+<li>在类的成员位置定义的：成员内部类。</li>
+<li>在类的局部位置定义的：局部内部类。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>成员内部类的调用：</p>
+<ol>
+<li>
+<p>外界调用内部类格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">外部类</span><span class="o">.</span><span class="na">内部类</span> <span class="n">对象名</span><span class="o">=</span><span class="n">外部类对象</span><span class="o">().</span><span class="na">内部类对象</span><span class="o">();</span>
+      <span class="c1">// 这里的外部类是定义了内部类的 “类”。
+</span></code></pre></div></li>
+<li>
+<p>私有内部类调用格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 创建成员内部类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">外部类名</span><span class="o">{</span>
+
+      <span class="kd">private</span> <span class="kd">class</span> <span class="nc">内部类名</span><span class="o">{</span>
+         <span class="n">类体</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="n">方法名</span><span class="o">{</span>
+      <span class="n">内部类名</span> <span class="n">对象名</span><span class="o">=</span><span class="k">new</span> <span class="n">内部类名对象</span><span class="o">();</span>
+      <span class="n">对象名</span><span class="o">.</span><span class="na">内部类中的方法名</span><span class="o">();</span>
+      <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>局部内部类</p>
+<ol>
+<li>
+<p>概括</p>
+<ol>
+<li>局部内部类是在方法中定义的内部类，外部无法直接访问，通过方法内部创建对象调用。</li>
+<li>局部内部类可以访问外部类的成员和方法内的局部变量。</li>
+</ol>
+</li>
+<li>
+<p>格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 创建局部内部类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">外部类名</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">外部方法名</span><span class="o">(){</span>
+      <span class="kd">class</span> <span class="nc">内部类名</span><span class="o">{</span>   <span class="c1">// 局部内部类不能使用 public 修饰符
+</span><span class="c1"></span>            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">内部方法名</span><span class="o">(){</span>
+               <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;123&#34;</span><span class="o">);</span>
+            <span class="o">}</span>
+      <span class="o">}</span>
+      <span class="n">内部类名</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">内部类名</span><span class="o">();</span>  <span class="c1">// new 局部内部类，new 方法必须在局部方法里面。
+</span><span class="c1"></span>      <span class="n">对象名</span><span class="o">.</span><span class="na">内部方法名</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// 调用局部内部类
+</span><span class="c1"></span><span class="n">pubic</span> <span class="kd">class</span> <span class="nc">类名</span><span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+      <span class="n">外部类名</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">外部类</span><span class="o">();</span> <span class="c1">// 通过 new 局部内部类的外部方法名调用。
+</span><span class="c1"></span>      <span class="n">对象名</span><span class="o">.</span><span class="na">外部方法名</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p>匿名内部类</p>
+<ol>
+<li>特点：
+<ol>
+<li>存在一个类或者接口，这里的类可以是具体的类也可以是抽象类。</li>
+<li>匿名内部类也是局部内部类的一部分。</li>
+<li>继承类或实现了该接口的子类匿名对象。</li>
+</ol>
+</li>
+<li>格式：
+<ol>
+<li>
+<p>创建匿名内部类</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 在方法里面创建匿名内部类
+</span><span class="c1"></span><span class="k">new</span> <span class="n">类名或接口名</span><span class="o">(){</span>
+   <span class="n">重写方法</span><span class="o">;</span>
+<span class="o">};</span>
+
+<span class="c1">// 让匿名内部类可以调用
+</span><span class="c1"></span><span class="k">new</span> <span class="n">类名或接口名</span><span class="o">(){</span>
+   <span class="n">重写方法</span><span class="o">;</span>
+<span class="o">}.</span><span class="na">重写的方法名</span><span class="o">;</span>
+
+<span class="c1">// 通过多态调用匿名内部类
+</span><span class="c1"></span><span class="n">类名</span> <span class="n">对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">匿名类名</span><span class="o">(){</span>
+   <span class="n">重写方法</span><span class="o">;</span>
+<span class="o">};</span>
+<span class="n">对象名</span><span class="o">.</span><span class="na">重写方法名</span><span class="o">();</span>   <span class="c1">//可以通过重写 对象名.重写方法名 实现多次调用
+</span></code></pre></div></li>
+<li>
+<p>调用匿名内部类</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">类名</span> <span class="n">对象名</span> <span class="o">=</span><span class="k">new</span> <span class="n">类名</span><span class="o">();</span>
+<span class="n">对象名</span><span class="o">.</span><span class="na">重写方法名</span><span class="o">();</span>
+</code></pre></div></li>
+<li>
+<p>匿名内部类在开发中使用</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 创建一个接口
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">接口名</span> <span class="o">{</span>
+<span class="kt">void</span> <span class="nf">抽象方法名</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="c1">// 创建操作类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">操作类名</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">方法名</span><span class="o">(</span><span class="n">接口名</span> <span class="n">参数</span><span class="o">){</span>
+      <span class="n">参数</span><span class="o">.</span><span class="na">抽象方法名</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// 创建测试类
+</span><span class="c1"></span><span class="n">操作类名</span> <span class="n">对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">操作类名</span><span class="o">();</span>
+<span class="n">对象名</span><span class="o">.</span><span class="na">方法名</span><span class="o">(</span><span class="k">new</span> <span class="n">接口名</span><span class="o">()</span> <span class="o">{</span>
+   <span class="nd">@Override</span>   <span class="c1">// 重构接口的抽象方法
+</span><span class="c1"></span>   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">抽象方法名</span><span class="o">(</span> <span class="o">{</span>
+   <span class="o">}</span>
+<span class="o">});</span>
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://211307.github.io/tags/java/">java</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>人不中二，往少年</span>
+    </div>
+</footer>
+    <script src="https://211307.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://211307.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://211307.github.io/js/fancybox.min.js"></script>
+<script src="https://211307.github.io/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>

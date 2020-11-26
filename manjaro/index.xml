@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manjaros on ZOZO</title>
+    <link>https://211307.github.io/manjaro/</link>
+    <description>Recent content in Manjaros on ZOZO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Nov 2020 10:02:17 +0800</lastBuildDate><atom:link href="https://211307.github.io/manjaro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manjaro-安装教程</title>
+      <link>https://211307.github.io/manjaro/manjaro-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/manjaro/manjaro-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description>Manjaro 安装 下载 Rufus 工具制作启动盘 去 Rufus 官网：[https://rufus.ie] 往下划找到 Download 点击 Other versions (GitHub) 进去历史下载页面 找到 rufus-3.0.exe 进行下载 下载 ManJaro.iso 镜像 官方下载镜像： 官方网址：[https://manjaro.org/</description>
+    </item>
+    
+    <item>
+      <title>Manjaro问题</title>
+      <link>https://211307.github.io/manjaro/manjaro%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/manjaro/manjaro%E9%97%AE%E9%A2%98/</guid>
+      <description>戴尔电脑 Manjaro 更换 登录屏幕 主题进入界面黑屏 问题： 有可能是 登录界面 的主题和桌面环境起冲突 解决方案： 按 ctrl+fn+alt+F12 进入 雷神终端 按 ctrl+fn+alt+F1 进入 桌面环境 打开应用程序，启动栏出现两个相同图标 解决方案 启动 IDEA 应用程序 启动终端，在终端输</description>
+    </item>
+    
+  </channel>
+</rss>

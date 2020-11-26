@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qians on ZOZO</title>
+    <link>https://211307.github.io/qian/</link>
+    <description>Recent content in Qians on ZOZO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Nov 2020 10:02:17 +0800</lastBuildDate><atom:link href="https://211307.github.io/qian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML5-基础</title>
+      <link>https://211307.github.io/qian/html5/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/qian/html5/</guid>
+      <description>网页的相关概念 网页 网站 是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。 网页 是网站中的一 “页”，通常是 HTML 格式的文件，它要通过浏览器来阅读。 HTML HTML 指的是 超文本标记语言(Hyper</description>
+    </item>
+    
+    <item>
+      <title>CSS-基础</title>
+      <link>https://211307.github.io/qian/css/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://211307.github.io/qian/css/</guid>
+      <description>CSS 基础 入门 CSS 基础 CSS 简介 CSS 是 层叠样式表 CSS 是一种标记语言 CSS 主要用于设置 HTML 页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局和外观显示样式。 CSS 美化 HTML，布局页</description>
+    </item>
+    
+    <item>
+      <title>JavaScript-基础</title>
+      <link>https://211307.github.io/qian/javascript-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://211307.github.io/qian/javascript-%E5%9F%BA%E7%A1%80/</guid>
+      <description>查文档 MDN 学习一个内置对象的使用，只要学会其常用成员的使用即可，我们可以通过查文档学习，可以通过 MDN/W3C 来查询。 Mozilla 开发者网络（MDN）提供了有关开放网络技术（Open Web）的信息，包含 HTML、CSS 和万维</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javas on ZOZO</title>
+    <link>https://211307.github.io/java/</link>
+    <description>Recent content in Javas on ZOZO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Aug 2020 10:02:17 +0800</lastBuildDate><atom:link href="https://211307.github.io/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>八、类加载器&amp;反射&amp;模块化</title>
+      <link>https://211307.github.io/java/8.%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8D%E5%B0%84%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Mon, 24 Aug 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/8.%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8D%E5%B0%84%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>类加载器 类加载 概述 当程序要使用某个类时，如果该类还未被加载到内存中，则系统会通过类的加载，类的连接，类的初始化这三个步骤来对类进行初始化。如果不出现意外情况，JVM 将会连续完成这三个步骤，所以有时也把</description>
+    </item>
+    
+    <item>
+      <title>七、网络编程</title>
+      <link>https://211307.github.io/java/7.-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Fri, 24 Jul 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/7.-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <description>网络编程入门 网络编程概述 计算机网络 是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算</description>
+    </item>
+    
+    <item>
+      <title>六、多线程</title>
+      <link>https://211307.github.io/java/6.-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Wed, 24 Jun 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/6.-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>实现多线程 线程同步 线程协作 实现多线程 进程（Process） 进程：是正在运行的程序。 是系统进行资源分配和调用的独立单位。 每一个进程都有它自己的内存空间和系统资源。 线程（Thread） 线程：是进程中的单个</description>
+    </item>
+    
+    <item>
+      <title>五、File类&amp;IO流</title>
+      <link>https://211307.github.io/java/5.-file%E7%B1%BBio%E6%B5%81/</link>
+      <pubDate>Sun, 24 May 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/5.-file%E7%B1%BBio%E6%B5%81/</guid>
+      <description>File 类 IO 流 File 类 File 类概述 文件和目录路径名的抽象表示。 文件和目录是可以通过 File 封装成对象的 对于 File 而言，其封装的并不是一个真正存在的文件，仅仅是一个路径名而已。 构造方法 File(String pathname)：通过将给定的路径名字</description>
+    </item>
+    
+    <item>
+      <title>四、异常&amp;集合</title>
+      <link>https://211307.github.io/java/4.-%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</link>
+      <pubDate>Fri, 24 Apr 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/4.-%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</guid>
+      <description>异常 集合进阶 Collection 集合 List 集合 Set 集合 泛型 Map 集合 异常 异常概述 异常：就是程序出现了不正常的情况。 Throwable 类是所有错误和异常的祖宗类。 Error：严重问题，不需要处理 Exception：称为异常类，它表示程序本身可以处</description>
+    </item>
+    
+    <item>
+      <title>三、Java-API接口</title>
+      <link>https://211307.github.io/java/3.-api%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Tue, 24 Mar 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/3.-api%E6%8E%A5%E5%8F%A3/</guid>
+      <description>Scanner 类 String 类 StringBuilder 类 集合类 Math&amp;amp;System类 Object类 Array 类 基本类型包装类 日期类 Date 类 SimpleDateFormat 类 Calendar 类 Java API 特点： 指的就是 JDK 中提供的各种功能的 Java 类。 使用 API 的使用应该先使用 import 导包。 Scanner 类 Scanner 类 获取键盘输入： // 导</description>
+    </item>
+    
+    <item>
+      <title>二、Java-面向对象</title>
+      <link>https://211307.github.io/java/2.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 24 Feb 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/2.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>封装 继承 包管理 多态 接口 内部类 面向过程：就是实现步骤的过程。 面向对象：从宏观的角度思考解决的过程。 对象的属性：每个对象的每个 属性 都拥有特定的 值。 对象的行为：对象能够 执行 的操作。 面向对象的三大特征：封装、</description>
+    </item>
+    
+    <item>
+      <title>一、Java-基础</title>
+      <link>https://211307.github.io/java/1.-java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 24 Jan 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/1.-java%E5%9F%BA%E7%A1%80/</guid>
+      <description>编程语言发展史 多种编程语言的介绍 java 的核心优势和生态体系 Java 应用程序的运行机制 JAVA 详细讲解 java 版本介绍 java 虚拟机介绍 java 内存划分 java 注释/关键字/标识符 常量和 final（字符常量） 变量 数据类型 运算符 判断语句（又称选</description>
+    </item>
+    
+  </channel>
+</rss>

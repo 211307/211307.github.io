@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZOZO</title>
+    <link>https://211307.github.io/</link>
+    <description>Recent content on ZOZO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Nov 2020 10:02:17 +0800</lastBuildDate><atom:link href="https://211307.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git-笔记</title>
+      <link>https://211307.github.io/post/git-%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/post/git-%E7%AC%94%E8%AE%B0/</guid>
+      <description>一、版本控制 1.1 什么是版本控制 版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。 实</description>
+    </item>
+    
+    <item>
+      <title>HTML5-基础</title>
+      <link>https://211307.github.io/qian/html5/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/qian/html5/</guid>
+      <description>网页的相关概念 网页 网站 是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。 网页 是网站中的一 “页”，通常是 HTML 格式的文件，它要通过浏览器来阅读。 HTML HTML 指的是 超文本标记语言(Hyper</description>
+    </item>
+    
+    <item>
+      <title>Manjaro-安装教程</title>
+      <link>https://211307.github.io/manjaro/manjaro-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/manjaro/manjaro-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description>Manjaro 安装 下载 Rufus 工具制作启动盘 去 Rufus 官网：[https://rufus.ie] 往下划找到 Download 点击 Other versions (GitHub) 进去历史下载页面 找到 rufus-3.0.exe 进行下载 下载 ManJaro.iso 镜像 官方下载镜像： 官方网址：[https://manjaro.org/</description>
+    </item>
+    
+    <item>
+      <title>Manjaro问题</title>
+      <link>https://211307.github.io/manjaro/manjaro%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 24 Nov 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/manjaro/manjaro%E9%97%AE%E9%A2%98/</guid>
+      <description>戴尔电脑 Manjaro 更换 登录屏幕 主题进入界面黑屏 问题： 有可能是 登录界面 的主题和桌面环境起冲突 解决方案： 按 ctrl+fn+alt+F12 进入 雷神终端 按 ctrl+fn+alt+F1 进入 桌面环境 打开应用程序，启动栏出现两个相同图标 解决方案 启动 IDEA 应用程序 启动终端，在终端输</description>
+    </item>
+    
+    <item>
+      <title>CSS-基础</title>
+      <link>https://211307.github.io/qian/css/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://211307.github.io/qian/css/</guid>
+      <description>CSS 基础 入门 CSS 基础 CSS 简介 CSS 是 层叠样式表 CSS 是一种标记语言 CSS 主要用于设置 HTML 页面中的文本内容（字体、大小、对齐方式等）、图片的外形（宽高、边框样式、边距等）以及版面的布局和外观显示样式。 CSS 美化 HTML，布局页</description>
+    </item>
+    
+    <item>
+      <title>JavaScript-基础</title>
+      <link>https://211307.github.io/qian/javascript-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://211307.github.io/qian/javascript-%E5%9F%BA%E7%A1%80/</guid>
+      <description>查文档 MDN 学习一个内置对象的使用，只要学会其常用成员的使用即可，我们可以通过查文档学习，可以通过 MDN/W3C 来查询。 Mozilla 开发者网络（MDN）提供了有关开放网络技术（Open Web）的信息，包含 HTML、CSS 和万维</description>
+    </item>
+    
+    <item>
+      <title>Tomcat</title>
+      <link>https://211307.github.io/fu/tomcat/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://211307.github.io/fu/tomcat/</guid>
+      <description>Tomcat 基础 Web 相关概念 软件架构 C/S：客户端/服务器端 B/S：浏览器/服务器端 资源分类 静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源。 静态资源可以直接被浏览器解析。 如：HTML，CSS，Jav</description>
+    </item>
+    
+    <item>
+      <title>八、类加载器&amp;反射&amp;模块化</title>
+      <link>https://211307.github.io/java/8.%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8D%E5%B0%84%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Mon, 24 Aug 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/8.%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8D%E5%B0%84%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>类加载器 类加载 概述 当程序要使用某个类时，如果该类还未被加载到内存中，则系统会通过类的加载，类的连接，类的初始化这三个步骤来对类进行初始化。如果不出现意外情况，JVM 将会连续完成这三个步骤，所以有时也把</description>
+    </item>
+    
+    <item>
+      <title>七、网络编程</title>
+      <link>https://211307.github.io/java/7.-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Fri, 24 Jul 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/7.-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <description>网络编程入门 网络编程概述 计算机网络 是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算</description>
+    </item>
+    
+    <item>
+      <title>六、多线程</title>
+      <link>https://211307.github.io/java/6.-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Wed, 24 Jun 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/6.-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>实现多线程 线程同步 线程协作 实现多线程 进程（Process） 进程：是正在运行的程序。 是系统进行资源分配和调用的独立单位。 每一个进程都有它自己的内存空间和系统资源。 线程（Thread） 线程：是进程中的单个</description>
+    </item>
+    
+    <item>
+      <title>五、File类&amp;IO流</title>
+      <link>https://211307.github.io/java/5.-file%E7%B1%BBio%E6%B5%81/</link>
+      <pubDate>Sun, 24 May 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/5.-file%E7%B1%BBio%E6%B5%81/</guid>
+      <description>File 类 IO 流 File 类 File 类概述 文件和目录路径名的抽象表示。 文件和目录是可以通过 File 封装成对象的 对于 File 而言，其封装的并不是一个真正存在的文件，仅仅是一个路径名而已。 构造方法 File(String pathname)：通过将给定的路径名字</description>
+    </item>
+    
+    <item>
+      <title>四、异常&amp;集合</title>
+      <link>https://211307.github.io/java/4.-%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</link>
+      <pubDate>Fri, 24 Apr 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/4.-%E5%BC%82%E5%B8%B8%E9%9B%86%E5%90%88/</guid>
+      <description>异常 集合进阶 Collection 集合 List 集合 Set 集合 泛型 Map 集合 异常 异常概述 异常：就是程序出现了不正常的情况。 Throwable 类是所有错误和异常的祖宗类。 Error：严重问题，不需要处理 Exception：称为异常类，它表示程序本身可以处</description>
+    </item>
+    
+    <item>
+      <title>三、Java-API接口</title>
+      <link>https://211307.github.io/java/3.-api%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Tue, 24 Mar 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/3.-api%E6%8E%A5%E5%8F%A3/</guid>
+      <description>Scanner 类 String 类 StringBuilder 类 集合类 Math&amp;amp;System类 Object类 Array 类 基本类型包装类 日期类 Date 类 SimpleDateFormat 类 Calendar 类 Java API 特点： 指的就是 JDK 中提供的各种功能的 Java 类。 使用 API 的使用应该先使用 import 导包。 Scanner 类 Scanner 类 获取键盘输入： // 导</description>
+    </item>
+    
+    <item>
+      <title>二、Java-面向对象</title>
+      <link>https://211307.github.io/java/2.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 24 Feb 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/2.-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>封装 继承 包管理 多态 接口 内部类 面向过程：就是实现步骤的过程。 面向对象：从宏观的角度思考解决的过程。 对象的属性：每个对象的每个 属性 都拥有特定的 值。 对象的行为：对象能够 执行 的操作。 面向对象的三大特征：封装、</description>
+    </item>
+    
+    <item>
+      <title>一、Java-基础</title>
+      <link>https://211307.github.io/java/1.-java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 24 Jan 2020 10:02:17 +0800</pubDate>
+      
+      <guid>https://211307.github.io/java/1.-java%E5%9F%BA%E7%A1%80/</guid>
+      <description>编程语言发展史 多种编程语言的介绍 java 的核心优势和生态体系 Java 应用程序的运行机制 JAVA 详细讲解 java 版本介绍 java 虚拟机介绍 java 内存划分 java 注释/关键字/标识符 常量和 final（字符常量） 变量 数据类型 运算符 判断语句（又称选</description>
+    </item>
+    
+  </channel>
+</rss>

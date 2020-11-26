@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="VarKai" />
+	
+	
+	
+	<title>Manjaro-安装教程 ｜ ZOZO</title>
+	
+    
+    
+    <meta name="description" content="Manjaro 安装 下载 Rufus 工具制作启动盘 去 Rufus 官网：[https://rufus.ie] 往下划找到 Download 点击 Other versions (GitHub) 进去历史下载页面 找到 rufus-3.0.exe 进行下载 下载 ManJaro.iso 镜像 官方下载镜像： 官方网址：[https://manjaro.org/" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, theme, zozo" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://211307.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://211307.github.io/">
+                    <span>ZOZO</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">中二少年</p>
+            <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://211307.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/manjaro/manjaro-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/'>Manjaro-安装教程</a></h2>
+                        <span class="date">2020.11.24</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="manjaro-安装">Manjaro 安装</h2>
+<hr>
+<ol>
+<li>下载 Rufus 工具制作启动盘
+<ul>
+<li>去 Rufus 官网：[https://rufus.ie]</li>
+<li>往下划找到 Download
+<ul>
+<li>点击 <code>Other versions (GitHub)</code> 进去历史下载页面</li>
+<li>找到 <code>rufus-3.0.exe</code> 进行下载</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>下载 ManJaro.iso 镜像
+<ol>
+<li>官方下载镜像：
+<ul>
+<li>官方网址：[https://manjaro.org/get-manjaro/]</li>
+<li>进入官方找到并点击 <code>Download</code></li>
+<li>选择下载 KDE 桌面环境的 ManJaro 镜像（因为 KDE 桌面环境自定性高，和 Win10 相似性高）</li>
+</ul>
+</li>
+<li>国内镜像源下载 ManJaro.iso
+<ul>
+<li>清华大学镜像源下载：
+<ul>
+<li>网络地址：[https://mirrors.tuna.tsinghua.edu.cn/osdn/storage/g/m/ma/manjaro/kde/]</li>
+<li>选择好版本点进去下载 ManJaro.iso 镜像</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>制作启动盘
+<ol>
+<li>以管理员身份运行 Rufus 工具</li>
+<li>选择好要安装镜像的 U 盘</li>
+<li>点击 <code>引导类型选择</code> 右边的 <code>选择</code>，导入 ManJaro.iso 镜像</li>
+<li>分区类型选择：GPT</li>
+<li>文件系统选择：NTFS（因为 ManJaro 镜像需要在 NTFS 文件系统下才能打开）</li>
+<li>点击 <code>开始</code></li>
+<li>在弹出的窗口中选择 <code>以 DD 镜像 模式写入</code></li>
+</ol>
+</li>
+<li>引导启动盘
+<ul>
+<li>戴尔 2020 年的 Blos
+<ul>
+<li>开机时按 F2 进入 Blos 界面</li>
+<li>点击 <code>System Configuration</code> 往下划找到 <code>SATA Operation</code>
+<ul>
+<li>选择 <code>AHCI</code> 模式</li>
+<li>默认是 <code>RAID On</code> 模式（此模式进入 PE 系统找不到磁盘）</li>
+</ul>
+</li>
+<li>插入 启动盘</li>
+<li>重启电脑</li>
+<li>按 F12 选择 U盘 启动</li>
+</ul>
+</li>
+<li>注意：
+<ul>
+<li>在进入系统安装界面之前，在 Win10 系统中的右击 <code>电脑</code> 选择 <code>管理</code> 进入 <code>磁盘管理</code> 查看那个磁盘分区是 Win10 的启动分区，并记好磁盘大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>安装 ManJaro 系统
+<ul>
+<li>按上下键选择 <code>Boot：Manjaro.86_64 kde</code>，进入安装界面</li>
+<li>双击桌面上的 <code>Install Manjaro Linux</code></li>
+<li>语言选择 英文</li>
+<li>分区选择 手动分区
+<ul>
+<li>ManJaro 启动分区使用 Win10 的启动分区
+<ul>
+<li>ManJaro 系统引导分区：
+<ul>
+<li><code>/boot/efi</code></li>
+<li>文件系统选择：FAT32</li>
+</ul>
+</li>
+<li>分区大小：
+<ul>
+<li>Win10 的启动分区多大，就使用多大
+<ul>
+<li>标记选择：
+<ul>
+<li>boot</li>
+<li>esp</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除 Win10 系统的分区</li>
+<li>虚拟内存：
+<ul>
+<li><code>linuxswap</code></li>
+<li>分区大小：8192 MiB</li>
+</ul>
+</li>
+<li>软件安装分区：
+<ul>
+<li><code>/opt</code></li>
+<li>文件系统选择：ext64</li>
+<li>分区大小：15G</li>
+</ul>
+</li>
+<li>根目录：
+<ul>
+<li><code>/</code></li>
+<li>文件系统选择：ext64</li>
+<li>分区大小：25G~30G</li>
+</ul>
+</li>
+<li>留 8G 的空闲分区</li>
+<li>家目录：
+<ul>
+<li><code>/home</code></li>
+<li>文件系统选择：ext64</li>
+<li>分区大小：剩余的空间全部使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="manjaro-安装之后的配置">Manjaro 安装之后的配置</h2>
+<hr>
+<ol>
+<li>
+<p>更换国内镜像源：</p>
+<ul>
+<li><code>sudo pacman-mirrors -m rank -c  China</code></li>
+</ul>
+</li>
+<li>
+<p>打开 <code>软件更新</code> 更新系统</p>
+</li>
+<li>
+<p>安装 yay 安装包管理工具(里面的软件包是程序员自己上传的)：</p>
+<ul>
+<li><code>sudo pacman -Sy yay</code>
+<ul>
+<li><code>-S</code>：安装软件包。</li>
+<li><code>-Sy</code>：安装软件包并同步软件包数据库。</li>
+<li><code>-Ss</code>：搜素软件包。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>删除软件：</p>
+<ul>
+<li><code>sudo pacman -R 软件名</code>：删除单个软件包,保留其全部已经安装的依赖关系。</li>
+<li><code>sudo pacman -Rs 软件名</code>：删除指定软件包,及其所有没有被其他已安装软件包使用的依赖关系。</li>
+<li><code>sudo pacman -Rsc 软件名</code>：要删除指定软件包和所有依赖这个软件包的程序。</li>
+</ul>
+</li>
+<li>
+<p>安装 fcitx 框架：</p>
+<ul>
+<li>
+<p><code>yay -Sy fcitx-im fcitx-configtool</code></p>
+</li>
+<li>
+<p>打开用户主文件夹，创建 <code>.xprofile</code> 文件。</p>
+</li>
+<li>
+<p>文件内容：</p>
+<ul>
+<li><code>export GTK_IM_MODULE=fcitx</code></li>
+<li><code>export QT_IM_MODULE=fcitx</code></li>
+<li><code>export XMODIFIERS=&quot;@im=fcitx&quot;</code></li>
+</ul>
+</li>
+<li>
+<p>注意：</p>
+<ul>
+<li>软件包全部安装</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>安装 fcitx-rime 输入法：</p>
+<ul>
+<li><code>yay -Sy fcitx-rime</code></li>
+</ul>
+</li>
+<li>
+<p>安装 virtualBox：</p>
+<ul>
+<li><code>sudo uname -r</code>：查看当前系统内核版本。</li>
+<li><code>sudo pacman -S virtualbox</code>：安装 virtualbox，选择对应系统内核的版本下载。</li>
+<li><code>sudo pacman -Ss virtualbox-ext-oracle</code>：安装 virtualBox 扩展包。</li>
+<li><code>sudo modprobe vboxdrv</code>：自动载入 vboxdrv 模块，还报错就重启系统。</li>
+</ul>
+</li>
+<li>
+<p>deb 包管理器：</p>
+<ul>
+<li>安装
+<ul>
+<li><code>sudo pacman -Q debtap</code>：检查有没有安装 debtap</li>
+<li><code>yay -S debtap</code>：安装 debtap</li>
+<li><code>sudo debtap -u</code>：升级 debtap</li>
+</ul>
+</li>
+<li>使用：
+<ul>
+<li><code>sudo debtap xxx.deb</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>安装 Tomcat 服务器软件：</p>
+<ul>
+<li>下载 Tomcat 压缩包和源码：
+<ul>
+<li>进入官网：
+<ul>
+<li>双击 <code>Download</code> 下面的 <code>Tomcat 9</code>，下载 Tomcat 9 版本。</li>
+<li>双击 <code>Core</code> 下面的 <code>tar.gz(pgp,sha512)</code>：下载 Tomcat 压缩包。</li>
+<li>双击 <code>Source Code Distributions</code> 下面的 <code>tar.gz(pgp,sha512)</code>：下载源码。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>安装 JDK</p>
+<ol>
+<li>下载 jdk。</li>
+<li>在 <code>用户主文件夹</code> 下创建一个存放环境变量的文件夹。</li>
+<li>把 jdk 解压到 环境变量文件夹 中。
+<ul>
+<li><code>tar -zxvf jdk名字 -C ~/环境变量文件夹的路径</code></li>
+</ul>
+</li>
+<li>在 <code>/etc/profile.d</code> 文件夹中创建一个 jdk.sh 文件：</li>
+</ol>
+<ul>
+<li>
+<p>文件内容：</p>
+<ul>
+<li><code>#!/bin/sh</code></li>
+<li><code>export JAVA_HOME=~/jdk 存放路径</code></li>
+<li><code>export JRE_HOME=/${JAVA_HOME}</code></li>
+<li><code>export CLASSPATH=.:${JAVA_HOME}/lib</code></li>
+<li><code>export PATH=${PATH}:${JAVA_HOME}/bin</code></li>
+</ul>
+</li>
+<li>
+<p>保存退出，并重启电脑。</p>
+</li>
+<li>
+<p>说明：</p>
+<ul>
+<li><code>JAVA_HOME</code>：Java 的主目录，压缩包解压之后得到的文件夹，所在的位置。</li>
+<li><code>JRE_HOME</code>：JRE 的主目录，JDK 里面有 JRE。</li>
+<li><code>CLASSPATH</code>：Java 提供的标准或公共类库的位置。</li>
+<li><code>PATH</code>：这是系统的变量，这个东西只是告诉系统你的 Java 开发环境被安装在了什么位置，这个东西使你在任意目录下都可以直接执行 Java 的开发工具比如 <code>javac</code> 等。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>使用注意点：</p>
+<ul>
+<li>把所有压缩包安装的软件放到用户目录下，方便迁移。</li>
+</ul>
+</li>
+<li>
+<p>Manjaro 快捷键：</p>
+<ul>
+<li><code>alt+.</code>：显示隐藏文件。</li>
+<li>打开文件管理器，按 <code>fn+F4</code> 打开文件管理器的终端。</li>
+</ul>
+</li>
+<li>
+<p>代理服务器科学上网</p>
+<ul>
+<li>购买一个境外服务器。</li>
+</ul>
+</li>
+</ul>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://211307.github.io/tags/linux/">Linux</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>人不中二，往少年</span>
+    </div>
+</footer>
+    <script src="https://211307.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://211307.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://211307.github.io/js/fancybox.min.js"></script>
+<script src="https://211307.github.io/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>

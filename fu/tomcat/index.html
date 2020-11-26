@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="VarKai" />
+	
+	
+	
+	<title>Tomcat ｜ ZOZO</title>
+	
+    
+    
+    <meta name="description" content="Tomcat 基础 Web 相关概念 软件架构 C/S：客户端/服务器端 B/S：浏览器/服务器端 资源分类 静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源。 静态资源可以直接被浏览器解析。 如：HTML，CSS，Jav" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, theme, zozo" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://211307.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://211307.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://211307.github.io/">
+                    <span>ZOZO</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">中二少年</p>
+            <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://211307.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/fu/tomcat/'>Tomcat</a></h2>
+                        <span class="date">2020.11.24</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="tomcat-基础">Tomcat 基础</h2>
+<hr>
+<h3 id="web-相关概念">Web 相关概念</h3>
+<ol>
+<li>软件架构
+<ol>
+<li>C/S：客户端/服务器端</li>
+<li>B/S：浏览器/服务器端</li>
+</ol>
+</li>
+<li>资源分类
+<ol>
+<li>静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源。
+<ul>
+<li>静态资源可以直接被浏览器解析。</li>
+<li>如：HTML，CSS，JavaScript</li>
+</ul>
+</li>
+<li>动态资源：每个用户访问相同资源后，得到的结果可能不一样，称为动态资源。
+<ul>
+<li>动态资源被访问后，需要先转换为静态资源，在返回给浏览器。</li>
+<li>如：servlet/jsp，PHP，asp&hellip;</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>网络通信三要素
+<ol>
+<li>IP 地址：电子设备在网络中的唯一标识。</li>
+<li>端口：应用程序在计算机中的唯一标识。0~65536</li>
+<li>传输协议：规定了数据传输的规则。
+<ul>
+<li>基础协议：
+<ul>
+<li>tcp：安全协议，三次握手。速度慢</li>
+<li>udp：不安全协议。速度快</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="web-服务器软件">Web 服务器软件</h3>
+<ul>
+<li><strong>概述</strong>
+<ul>
+<li><strong>服务器</strong>：安装了服务器软件的计算机。</li>
+<li><strong>服务器软件</strong>：接收用户的请求，处理请求，做出相应。</li>
+<li><strong>Web 服务器软件</strong>：接收用户的请求，处理请求，做出相应。
+<ul>
+<li>在 web 服务器软件中，可以部署 web 项目，让用户通过浏览器来访问这些项目。</li>
+<li>web 容器</li>
+</ul>
+</li>
+<li><strong>常见的 java 相关的 web 服务器软件</strong>
+<ul>
+<li>webLogic：Oracle 公司，大型的 JavaEE 服务器，支持所有的 JavaEE 规范，收费。</li>
+<li>webSphere：IBM 公司，大型的 JavaEE 服务器，支持所有的 JavaEE 规范，收费。</li>
+<li>JBOSS：JBOSS 公司的，大型的 JavaEE 服务器，支持所用的 JavaEE 规范，收费。</li>
+<li>Tomcat：Apache 基金组织，中小型的 JavaEE 服务器，仅仅支持少量的 JavaEE 规范 servlet/jsp。开源的，免费的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="tomcat-安装卸载启动">Tomcat 安装&amp;卸载&amp;启动</h3>
+<ol>
+<li>
+<p><strong>下载</strong>：<a href="http://tomcat.apache.org/">Tomcat</a></p>
+<ul>
+<li>下载 核心版</li>
+</ul>
+</li>
+<li>
+<p><strong>安装</strong>：解压压缩包即可。</p>
+<ul>
+<li>注意：安装目录建议不要有中文和空格。</li>
+</ul>
+</li>
+<li>
+<p><strong>卸载</strong>：删除目录就行了。</p>
+</li>
+<li>
+<p><strong>启动</strong>：在 <code>bin\</code> 文件夹下 找到 <code>startup.bat</code> 文件双击</p>
+<ul>
+<li>Linux 系统下双击 <code>startup.sh</code> 文件。</li>
+<li><strong>访问</strong>：浏览器输入：
+<ul>
+<li><code>http://localhost:8080</code> 回车访问访问自己</li>
+<li><code>htp://别人IP:8080</code> 访问别人</li>
+</ul>
+</li>
+<li><strong>可能遇到的问题</strong>
+<ul>
+<li>黑窗口一闪而过：
+<ul>
+<li>原因：没有正确配置 JAVA_HOME 环境变量</li>
+<li>解决方案：
+<ul>
+<li>在环境变量中添加 JAVA_HOME 环境变量</li>
+<li>并把 JAVA_HOME 添加到 Path 环境中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>启动报错：
+<ul>
+<li>解决方案：
+<ol>
+<li>
+<p>暴力：找到占用的端口号，并且找到对应的进程，杀死该进程。</p>
+<ul>
+<li>在 <code>cmd</code> 中输入 <code>netstat -ano</code></li>
+<li>找到占用 8080 端口号应用的 PID</li>
+<li>进入 任务管理器 通过 PID 找到 该应用，并结束该应用。</li>
+</ul>
+</li>
+<li>
+<p>温柔：修改自身的端口号。</p>
+<ul>
+<li>进入 <code>conf</code> 文件夹下，打开 <code>server.xml</code> 文件</li>
+<li>找到下面代码，修改 <code>port</code> 后面的端口号</li>
+<li>一般会将 Tomcat 的默认端口号修改为 80。80 端口号是 http 协议的默认端口号。</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;Connector</span> <span class="na">port=</span><span class="s">&#34;8080&#34;</span> <span class="na">protocol=</span><span class="s">&#34;HTTP/1.1&#34;</span>
+        <span class="na">connectionTimeout=</span><span class="s">&#34;20000&#34;</span>
+        <span class="na">redirectPort=</span><span class="s">&#34;8443&#34;</span> <span class="nt">/&gt;</span>
+</code></pre></div></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭</strong></p>
+<ul>
+<li><strong>正常关闭</strong>
+<ol>
+<li>双击 <code>bin\shutdown.bat</code> 文件</li>
+<li>按下 <code>Ctrl + c</code></li>
+</ol>
+</li>
+<li><strong>强制关闭</strong>
+<ul>
+<li>直接关闭命令行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>配置项目路径</strong></p>
+<ul>
+<li><strong>配置项目的方式</strong>
+<ol>
+<li>
+<p><strong>直接将项目放到 <code>webapps</code> 目录下</strong>。</p>
+<ul>
+<li>访问项目：
+<ul>
+<li>启动 Tomcat ，在浏览器输入 <code>localhost:8080/项目名称/项目的文件.后缀名</code></li>
+<li>概念：
+<ul>
+<li><code>/项目名称</code>：项目的访问路径 &ndash;&gt; 虚拟目录</li>
+<li><code>/项目的文件.后缀名</code>：资源名称</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>简化部署</strong>
+<ul>
+<li>将项目打包成 <code>.war</code> 包，再将 <code>.war</code> 包放置到 <code>webapps</code> 文件夹下
+<ul>
+<li>Tomcat 会自动解压缩 <code>.war</code> 文件。</li>
+<li>删除 <code>.war</code> 文件，项目也会被删除。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>配置 conf/server.xml 文件</strong></p>
+<ul>
+<li>在 &lt;Host&gt; 标签体中配置 <code>&lt;Context docBase='项目存放路径' path='虚拟目录' /&gt;</code>
+<ul>
+<li>此方法需要重启服务器，所以不推荐使用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>在 conf/Catalina/localhost 文件夹下创建任意名称的 xml 文件</strong></p>
+<ul>
+<li>在文件中编写：<code>&lt;Context docBase='项目存放路径' /&gt;</code></li>
+<li>虚拟目录：就是 xml 文件的名称</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="tomcat-项目">Tomcat 项目</h3>
+<ul>
+<li>
+<p><strong>静态项目和动态项目</strong></p>
+<ul>
+<li><strong>目录结构</strong>
+<ul>
+<li><strong>java 动态项目的目录结构</strong>：
+<ul>
+<li>项目的根目录
+<ul>
+<li>WEB-INF 目录： // 有 WEB-INF 的项目是动态项目
+<ul>
+<li>
+<p>web.xml：web 项目的核心配置文件。</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- xml文件核心代码 --&gt;</span>
+<span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span class="nt">&lt;web-app</span> <span class="na">xmlns=</span><span class="s">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
+  <span class="na">xmlns:xsi=</span><span class="s">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">&#34;http://xmlns.jcp.org/xml/ns/javaee
+</span><span class="s">                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&#34;</span>
+  <span class="na">version =</span><span class="s">&#34;3.1&#34;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- 欢迎文件列表（指定项目默认打开文件） --&gt;</span>
+<span class="nt">&lt;welcome-file-list&gt;</span>
+    <span class="nt">&lt;welcome-file&gt;</span>index.html<span class="nt">&lt;/welcome-file&gt;</span>
+    <span class="nt">&lt;welcome-file&gt;</span>index.htm<span class="nt">&lt;/welcome-file&gt;</span>
+    <span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+<span class="nt">&lt;/welcome-file-list&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</code></pre></div></li>
+<li>
+<p>classes目录：放置字节码文件的目录。</p>
+</li>
+<li>
+<p>lib目录：放置依赖的 jar 包。</p>
+</li>
+</ul>
+</li>
+<li>项目文件或目录</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>项目打包</strong>
+<ul>
+<li>使用命令行进入 项目文件夹下。</li>
+<li>输入：<code>jar cvf 盘符:\文件保存的路径\文件名.war .</code>
+<ul>
+<li><code>.</code>：表示打包当前文件夹下所有的文件。</li>
+<li><code>盘符:\文件保存的路径\</code>：表示打包完之后，存放的位置。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Eclipse 创建和打包Web工程</strong></p>
+<ul>
+<li><strong>Eclipse 添加 Tomcat 服务器</strong>
+<ul>
+<li>点击 <code>窗口</code> 选择 <code>首选项</code></li>
+<li>找到 <code>Server</code> 点击 <code>Runtime Environments</code></li>
+<li>点击 <code>Add...</code> 选择对应版本的 <code>Apache Tomcat v*.*</code> 点击下一步</li>
+<li>点击 <code>Browse...</code> 导入 Tomcat。</li>
+</ul>
+</li>
+<li><strong>创建 Server 项目</strong>
+<ul>
+<li>按下 <code>Ctrl + n</code> 找到 Server 文件夹下的 <code>Server</code> 点击下一步</li>
+<li>回车</li>
+</ul>
+</li>
+<li><strong>创建 Web 项目</strong>
+<ul>
+<li><code>Ctrl + n</code> 弹出新建窗口</li>
+<li>往下滑 找到 <code>Web</code> 下的 <code>Dynamic Web Project</code> 点击下一步
+<ul>
+<li><code>Project name</code>：项目名称</li>
+<li><code>Dynamic web module yersion</code>：选择动态 web 版本</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>新建项目文件</strong>
+<ul>
+<li>打开 项目文件</li>
+<li>点击 <code>WebContent</code> 按 <code>Ctrl + n</code></li>
+<li>找到 <code>Web</code> 点击 <code>HTML File</code></li>
+<li>新建 HTML 文件</li>
+</ul>
+</li>
+<li><strong>运行项目</strong>
+<ul>
+<li>右击 项目名</li>
+<li>找到 运行方式</li>
+<li>选择 <code>Run on Server</code> 运行。</li>
+</ul>
+</li>
+<li><strong>打包项目</strong>
+<ul>
+<li>右击 项目名</li>
+<li>找到 导出</li>
+<li>选择 <code>WAR file</code></li>
+<li>点击 <code>Browse...</code></li>
+<li>选择 war 包保存地址。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建虚拟主机">创建虚拟主机</h2>
+<ul>
+<li><strong>域名解析服务 DNS</strong>
+<ul>
+<li>DNS，Domain Name Service，域名解析服务，就是将域名与 IP 进行映射的服务。而提供这种服务的服务器，称为 DNS 服务器。</li>
+</ul>
+</li>
+<li><strong>添加域名解析</strong>
+<ul>
+<li>
+<p>在 <code>C:\Windows\System32\drivers\etc\hosts</code> 文件中 IP 映射 域名。</p>
+<ul>
+<li><code>hosts</code> 文件不能修改只能替换。</li>
+</ul>
+</li>
+<li>
+<p>打开 <code>conf/server.xml</code> 文件，找到最后一个 &lt;/Host&gt; 标签输入一下代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml">      <span class="nt">&lt;Host</span> <span class="na">name=</span><span class="s">&#34;localhost&#34;</span>  <span class="na">appBase=</span><span class="s">&#34;webapps&#34;</span>
+            <span class="na">unpackWARs=</span><span class="s">&#34;true&#34;</span> <span class="na">autoDeploy=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;/Host&gt;</span>
+</code></pre></div><ul>
+<li><strong>属性</strong>
+<ul>
+<li><code>name=&quot; &quot;</code> ：域名，修改完后</li>
+<li><code>appBase=&quot; &quot;</code>：项目存放路径，相对路径从 Tomcat 根目录开始。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>修改默认主机</strong></p>
+<ul>
+<li>打开 <code>conf/server.xml</code> 文件</li>
+<li>找到 <code>&lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot;&gt;</code> 代码修改默认主机。
+<ul>
+<li><code>defaultHost=&quot; &quot;</code>：默认的主机名</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>修改默认端口号</strong></p>
+<ul>
+<li>
+<p>打开 <code>conf/server.xml</code> 文件</p>
+</li>
+<li>
+<p>找到</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;Connector</span> <span class="na">port=</span><span class="s">&#34;8080&#34;</span> <span class="na">protocol=</span><span class="s">&#34;HTTP/1.1&#34;</span>
+        <span class="na">connectionTimeout=</span><span class="s">&#34;20000&#34;</span>
+        <span class="na">redirectPort=</span><span class="s">&#34;8443&#34;</span> <span class="nt">/&gt;</span>
+</code></pre></div><ul>
+<li><strong>属性</strong>
+<ul>
+<li><code>port=&quot; &quot;</code>：默认端口号，浏览器默认端口号是 80</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>注意</strong></p>
+<ul>
+<li>此操作需要重启 Tomcat 服务器。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="指定虚拟主机的默认应用及-managerapp-的用法">指定虚拟主机的默认应用及 ManagerAPP 的用法</h3>
+<ul>
+<li>
+<p><strong>修改默认页面</strong></p>
+<ul>
+<li>把项目名修改为 <code>ROOT</code></li>
+<li>然后直接在 浏览器中输入 <code>localhost</code>，即可访问。
+<ul>
+<li>如果不想要 <code>localhost:8080</code> 后面的 8080 ，即可把端口号修改为 浏览器默认的 80 端口</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tomcat 添加用户</strong></p>
+<ul>
+<li>
+<p>打开 <code>conf/tomcat-users.xml</code> 文件</p>
+</li>
+<li>
+<p>在 <code>&lt;/tomcat-users&gt;</code> 标签上面添加下面代码</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&#34;manager-gui&#34;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&#34;tomcat&#34;</span> <span class="na">password=</span><span class="s">&#34;s3cret&#34;</span> <span class="na">roles=</span><span class="s">&#34;manager-gui&#34;</span><span class="nt">/&gt;</span>
+</code></pre></div><ul>
+<li><strong>属性</strong>
+<ul>
+<li><code>username=&quot; &quot;</code>：用户名</li>
+<li><code>password=&quot; &quot;</code>：密码</li>
+<li>其它不能动</li>
+<li>修改完重启 Tomcat 服务器</li>
+</ul>
+</li>
+<li><strong>使用</strong>：
+<ul>
+<li>在页面输入 <code>localhost:8080</code></li>
+<li>点击 <code>Manager APP</code> 输入刚才设置的用户名和密码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://211307.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>人不中二，往少年</span>
+    </div>
+</footer>
+    <script src="https://211307.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://211307.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://211307.github.io/js/fancybox.min.js"></script>
+<script src="https://211307.github.io/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>
